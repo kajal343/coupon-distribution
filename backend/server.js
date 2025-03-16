@@ -17,7 +17,9 @@ app.use(cookieParser());
 // Connect to Database
 connectDB();
 
-// Routes
+app.get("/", (req, res) => {
+    res.send("Backend is live! 🚀");
+});
 app.use("/api/coupons", couponRoutes);
 app.use("/api/admin", adminRoutes);
 
